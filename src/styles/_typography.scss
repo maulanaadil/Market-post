@@ -1,0 +1,38 @@
+@use "sass:map";
+$ff-sans: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+$font-sizes: (
+  64: 64px,
+  52: 52px,
+  48: 48px,
+  36: 36px,
+  30: 30px,
+  24: 24px,
+  18: 18px,
+  16: 16px,
+  14: 14px,
+  12: 12px,
+);
+
+$font-weights: (
+  light: 300,
+  normal: 400,
+  semibold: 600,
+  bold: 700,
+);
+
+@function fs($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  } @else {
+    @error '$font-sizes does not have that size!';
+  }
+}
+
+@function fw($font-weight) {
+  @if map.has-key($font-weights, $font-weight) {
+    @return map.get($font-weights, $font-weight);
+  } @else {
+    @error '$font-sizes does not have that size!';
+  }
+}

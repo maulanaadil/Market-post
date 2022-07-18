@@ -1,0 +1,8 @@
+@import "../../index";
+
+.auth-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  font-size: fs(14);
+  font-weight: fw(bold);
+}

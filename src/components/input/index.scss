@@ -1,0 +1,27 @@
+@import "../../index";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .input-label {
+    margin-bottom: 5px;
+    font-size: fs(18);
+    font-weight: fw(normal);
+  }
+
+  .input {
+    padding: 15px;
+    background: $primary-white;
+    border: 1px solid $txt-color-subtle-grey;
+    border-radius: 8px;
+    font-weight: fw(normal);
+    font-size: fs(18);
+    font-family: $ff-sans;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}

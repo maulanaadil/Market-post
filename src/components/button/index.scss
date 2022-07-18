@@ -1,0 +1,82 @@
+@import "../../index";
+
+@mixin btn-size($size) {
+  @if $size == block {
+    width: 100%;
+  } @else if $size == large {
+    padding: 12px 24px;
+    font-size: fs(18);
+  } @else if $size == small {
+    padding: 8px 12px;
+  } @else {
+    @error "Unknown Size #{$size}.";
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+  transition: 0.2s all;
+  background-color: $primary-blue;
+
+  color: $primary-white;
+  font-weight: fw(semibold);
+
+  font-size: fs(14);
+  padding: 12px;
+  border-radius: 4px;
+
+  &.btn-primary {
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+
+    &.btn-block {
+      @include btn-size(block);
+    }
+
+    &.btn-sm {
+      @include btn-size(small);
+    }
+
+    &.btn-lg {
+      @include btn-size(large);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary-green;
+    border: 1px solid $secondary-green;
+
+    &.btn-block {
+      @include btn-size(block);
+    }
+
+    &.btn-sm {
+      @include btn-size(small);
+    }
+
+    &.btn-lg {
+      @include btn-size(large);
+    }
+  }
+
+  &.btn-outline {
+    background-color: $primary-white;
+    border: 1px solid $primary-blue;
+
+    &.btn-block {
+      @include btn-size(block);
+    }
+
+    &.btn-sm {
+      @include btn-size(small);
+    }
+
+    &.btn-lg {
+      @include btn-size(large);
+    }
+  }
+}

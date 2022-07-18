@@ -1,0 +1,15 @@
+@import "./styles/index";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  color: $primary-blue;
+  font-size: fs(30);
+  font-weight: fw(normal);
+}
