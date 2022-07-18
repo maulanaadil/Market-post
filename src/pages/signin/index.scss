@@ -1,8 +1,16 @@
-@import "../../index";
+@import '../../index';
+.signin-form-container {
+  height: 100vh;
+  width: 60%;
+  float: left;
+}
 
-.auth-container {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  font-size: fs(14);
-  font-weight: fw(bold);
+.signin-greetings-container {
+  height: 100vh;
+  width: 40%;
+  background: url('../../assets/images/background-form.png')
+    rgba(64, 160, 208, 1);
+  background-size: cover;
+  background-blend-mode: multiply;
+  float: right;
 }

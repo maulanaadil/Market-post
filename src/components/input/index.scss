@@ -1,4 +1,4 @@
-@import "../../index";
+@import '../../index';
 
 .input-container {
   display: flex;
@@ -6,7 +6,7 @@
   align-items: flex-start;
 
   .input-label {
-    margin-bottom: 5px;
+    margin-bottom: 12px;
     font-size: fs(18);
     font-weight: fw(normal);
   }

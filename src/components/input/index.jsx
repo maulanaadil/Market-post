@@ -1,26 +1,28 @@
-import React from "react";
-import "./index.scss";
+import React from 'react';
+import propTypes from 'prop-types';
+
+import './index.scss';
 
 export default function Input(props) {
   const className = [props.className];
 
   const checkElementRender = (element) => {
-    if (element === "input") {
+    if (element === 'input') {
       return (
         <input
           placeholder={props.placeholder}
           name={props.name}
-          className={`input ${className.join(" ")}`}
+          className={`input ${className.join(' ')}`}
           style={props.style}
           {...props}
         />
       );
-    } else if (element === "textArea") {
+    } else if (element === 'textArea') {
       return (
         <textarea
           placeholder={props.placeholder}
           name={props.name}
-          className={`input ${className.join(" ")}`}
+          className={`input ${className.join(' ')}`}
           style={props.style}
           {...props}
         />
@@ -38,3 +40,12 @@ export default function Input(props) {
     </div>
   );
 }
+
+Input.propTypes = {
+  element: propTypes.oneOf(['input', 'textArea']).isRequired,
+  placeholder: propTypes.string.isRequired,
+  className: propTypes.string,
+  style: propTypes.string,
+  label: propTypes.string.isRequired,
+  children: propTypes.node,
+};

@@ -1,10 +1,11 @@
-@use "sass:map";
+@use 'sass:map';
 $ff-sans: Inter, Avenir, Helvetica, Arial, sans-serif;
 
 $font-sizes: (
   64: 64px,
   52: 52px,
   48: 48px,
+  40: 40px,
   36: 36px,
   30: 30px,
   24: 24px,
@@ -17,6 +18,7 @@ $font-sizes: (
 $font-weights: (
   light: 300,
   normal: 400,
+  medium: 500,
   semibold: 600,
   bold: 700,
 );

@@ -5,13 +5,11 @@ import SignInPage from "./pages/signin";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path='/signin' element={<SignInPage />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/signin' element={<SignInPage />} />
+      </Routes>
+    </Router>
   );
 }
 
