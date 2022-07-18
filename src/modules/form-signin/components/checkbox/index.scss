@@ -1,0 +1,17 @@
+@import '../../../../index';
+
+.container-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  input {
+    margin: 0;
+  }
+
+  label {
+    font-size: fs(14);
+    font-weight: fw(normal);
+  }
+}
