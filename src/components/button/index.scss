@@ -1,4 +1,4 @@
-@import "../../index";
+@import '../../index';
 
 @mixin btn-size($size) {
   @if $size == block {
@@ -32,6 +32,10 @@
   &.btn-primary {
     background-color: $primary-blue;
     border: 1px solid $primary-blue;
+
+    &:hover {
+      background-color: $secondary-blue;
+    }
 
     &.btn-block {
       @include btn-size(block);
