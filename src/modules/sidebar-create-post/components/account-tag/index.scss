@@ -1,0 +1,24 @@
+.user-tag {
+  display: flex;
+  height: 100%;
+  padding: 8px;
+  gap: 7px;
+  border: 1px solid #CECECE;
+  border-radius: 5px;
+  cursor: default;
+
+  .btn-remove {
+    background-color: transparent;
+    border: none;
+
+    .icon {
+      height: 100%;
+      width: auto;
+
+      img {
+        height: 10px;
+        filter: grayscale(100%);
+      }
+    }
+  }
+}

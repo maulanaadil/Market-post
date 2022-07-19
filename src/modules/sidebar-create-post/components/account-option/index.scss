@@ -1,0 +1,39 @@
+@import '../../../../index';
+
+.account-option {
+  display: flex;
+  gap: 18px;
+
+  .divider {
+    width: 1px;
+    background-color: #e2e2e2;
+  }
+
+  .checkbox {
+    height: 21px;
+    width: 21px;
+    margin: auto 0;
+  }
+
+  .social-media-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    .social-media-logo {
+      height: 27px;
+    }
+
+    .name {
+      color: $txt-color-black;
+      margin-bottom: 5px;
+      font-weight: fw(semibold);
+    }
+
+    .username {
+      color: #848484;
+      font-weight: fw(medium);
+    }
+  }
+}
