@@ -16,6 +16,7 @@ import DraftEdit from '@assets/icons/draft-edit.svg';
 import DraftDelete from '@assets/icons/draft-delete.svg';
 import NotifIcon from '@assets/icons/notif.svg';
 import HeaderDropdownIcon from '@assets/icons/header_dropdown.svg';
+import LocationIcon from '@assets/icons/location.svg';
 
 export const iconTypes = {
   facebook: 'FACEBOOK_ICON',
@@ -34,6 +35,9 @@ export const iconTypes = {
 
   close: 'CLOSE_ICON',
   dropdown: 'DROPDOWN_ICON',
+  close: 'CLOSE_ICON',
+  dropdown: 'DROPDOWN_ICON',
+  location: 'LOCATION_ICON',
 };
 
 const iconSrc = {
@@ -54,6 +58,7 @@ const iconSrc = {
 
   CLOSE_ICON: CloseIcon,
   DROPDOWN_ICON: DropdownIcon,
+  LOCATION_ICON: LocationIcon,
 };
 
 export default function Icon({ type }) {

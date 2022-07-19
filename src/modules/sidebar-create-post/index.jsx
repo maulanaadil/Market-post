@@ -5,6 +5,7 @@ import { iconTypes } from '../../components/icon';
 
 import './index.scss';
 import InputPostFor from './components/input/post-for';
+import InputPostCaption from './components/input/post-caption';
 
 export default function SidebarCreatePost() {
   function handleClose() {
@@ -40,7 +41,14 @@ export default function SidebarCreatePost() {
             <div className='form-post'>
               <InputPostFor />
 
-              <div className='post-caption'></div>
+              <div className='post-caption'>
+                <InputPostCaption
+                  handleChange={() => {}}
+                  handleLocation={() => {
+                    console.log('Location');
+                  }}
+                />
+              </div>
 
               <div className='attach-images'></div>
 

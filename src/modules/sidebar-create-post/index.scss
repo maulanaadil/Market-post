@@ -28,7 +28,7 @@
   height: 100%;
   max-width: 578px;
   width: 100%;
-  right: 0;  
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,6 +83,11 @@
   margin-left: auto;
 }
 
+.create-post .form-post {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
 .btn-publish {
   font-size: fs(14);

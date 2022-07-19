@@ -34,9 +34,11 @@ export default function Input(props) {
 
   return (
     <div className='input-container'>
-      <label htmlFor={props.label} className='input-label'>
-        {props.label}
-      </label>
+      {props.label && (
+        <label htmlFor={props.label} className='input-label'>
+          {props.label}
+        </label>
+      )}
       {checkElementRender(props.element)}
       {props.children}
     </div>
