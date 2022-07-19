@@ -1,23 +1,23 @@
-import React from "react"
+import React from 'react';
 
-import Logo from "@assets/images/logo.png"
-import { iconTypes } from "@components/icon"
-import MenuItem from "./components/menu-item"
+import Logo from '@assets/images/logo.png';
+import MenuItem from './components/menu-item';
 
-import "./index.scss"
+import { navLinks } from './navlinks';
+import './index.scss';
 
 export default function Sidebar() {
   return (
-    <div className="container-sidebar">
-      <div className="wrapper-sidebar">
-        <img src={Logo} alt="Market Project Logo" className="logo-sidebar" />
-        <div className="divider-sidebar"></div>
-        <div className="menu-sidebar">
-          <MenuItem link={'#'} icon={iconTypes.home} label="Home" isActive={true} />
-          <MenuItem link={'#'} icon={iconTypes.engagement} label="Engagement" />
-          <MenuItem link={'#'} icon={iconTypes.draft} label="Draft" />
+    <div className='container-sidebar'>
+      <div className='wrapper-sidebar'>
+        <img src={Logo} alt='Market Project Logo' className='logo-sidebar' />
+        <div className='divider-sidebar'></div>
+        <div className='menu-sidebar'>
+          {navLinks.map((item) => (
+            <MenuItem link={item.path} icon={item.icon} label={item.label} />
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 import Sidebar from '@modules/sidebar';
 
-export default function HomePage() {
+export default function EngagementPage() {
   return (
     <>
       <Sidebar />
