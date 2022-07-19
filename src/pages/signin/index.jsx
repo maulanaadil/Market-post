@@ -13,6 +13,7 @@ export default function SignInPage() {
         <GreetingsBanner
           title={`Welcome Back \nto\n Market Project`}
           description={`Login to keep connected with us`}
+          page={`signin`}
         />
       </div>
     </>
