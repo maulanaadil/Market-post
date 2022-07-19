@@ -1,0 +1,70 @@
+@import '../../index';
+.container-sidebar {
+  min-height: 100vh;
+  max-width: 270px;
+  width: 100%;
+  border-right: #E4E4E4 solid 1px;
+  min-width: 0;
+}
+
+.container-sidebar * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper-sidebar {
+  padding: 30px 40px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 30px;
+}
+
+.logo-sidebar {
+  max-width: 173px;
+  margin: auto;
+  display: block;
+}
+
+.divider-sidebar {
+  display: block;
+  height: 1px;
+  background: $primary-blue;
+}
+
+.menu-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  color: $primary-blue;
+  font-weight: fw(semibold);
+  font-size: fs(16);
+}
+
+.menu-sidebar .icon {
+  width: auto;
+  height: auto;
+}
+
+.menu-item-sidebar {
+  text-decoration: none;
+  color: $primary-blue;
+}
+
+.menu-item-sidebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  border-radius: 5px;
+}
+
+.menu-item-sidebar.active {
+  background-color: $primary-blue;
+  color: $primary-white;
+}
+
+.menu-item-sidebar.active .icon {
+  filter: brightness(0) invert(1);
+}
