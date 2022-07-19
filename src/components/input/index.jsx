@@ -14,6 +14,7 @@ export default function Input(props) {
           name={props.name}
           className={`input ${className.join(' ')}`}
           style={props.style}
+          onChange={props.handleChange}
           {...props}
         />
       );
@@ -24,6 +25,7 @@ export default function Input(props) {
           name={props.name}
           className={`input ${className.join(' ')}`}
           style={props.style}
+          onChange={props.handleChange}
           {...props}
         />
       );
@@ -48,4 +50,5 @@ Input.propTypes = {
   style: propTypes.string,
   label: propTypes.string.isRequired,
   children: propTypes.node,
+  handleChange: propTypes.func.isRequired,
 };

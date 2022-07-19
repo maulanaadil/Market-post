@@ -1,30 +1,59 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Logo from '@assets/images/logo.png';
 import { Input, Button } from '@components';
 import Checkbox from './components/checkbox';
 
 import './index.scss';
+import { defaultFormSignInFields } from './utils';
 
-export default function FormSignIn(props) {
+export default function FormSignIn() {
+  const [formFields, setFormFields] = useState(defaultFormSignInFields);
+  const { email, password } = formFields;
+  const navigate = useNavigate();
+
+  const onHandleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormFields({ ...formFields, [name]: value });
+  };
+
+  const onHandleSubmit = (event) => {
+    event.preventDefault();
+
+    if (email === 'admin@market.com' && password === 'password') {
+      alert('success');
+      navigate('/', { replace: true });
+    } else {
+      alert('Invalid account!');
+    }
+  };
+
   return (
     <div className='container-form'>
       <img src={Logo} alt='Market Project Logo' className='logo-form' />
-      <form className='wrapper-form' onSubmit={props.onHandleSubmit}>
+      <form className='wrapper-form' onSubmit={onHandleSubmit}>
         <h2 className='title-form'>Login Account</h2>
         <Input
           type='email'
           element='input'
           placeholder='Input your email'
           label='Email'
+          name='email'
+          value={email}
+          handleChange={onHandleChange}
+          required
         />
         <Input
           type='password'
           element='input'
           placeholder='Input your password'
           label='Password'
+          name='password'
+          value={password}
+          handleChange={onHandleChange}
+          required
         />
         <div className='wrapper-checkbox'>
           <Checkbox label={`Remember Me`} />
@@ -39,7 +68,3 @@ export default function FormSignIn(props) {
     </div>
   );
 }
-
-FormSignIn.proptypes = {
-  onHandleSubmit: PropTypes.func.isRequired,
-};
