@@ -17,6 +17,13 @@
     height: 33px;
     display: flex;
     align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .input-select .input-wrapper {
