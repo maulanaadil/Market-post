@@ -13,9 +13,15 @@ export default function GreetingsBanner(props) {
       <h4 className='greeting-description'>{props.description}</h4>
       <div className='wrapper-greeting-not-have-account'>
         <p>Don't have an account?</p>
-        <Link to='/signup' className='greeting-create-account'>
-          Create account
-        </Link>
+        {props.page === 'signin' ? (
+          <Link to='/signup' className='greeting-create-account'>
+            Create account
+          </Link>
+        ) : (
+          <Link to='/signin' className='greeting-create-account'>
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
