@@ -1,7 +1,9 @@
-import Sidebar from "../../modules/sidebar"
+import Sidebar from '@modules/sidebar';
 
 export default function HomePage() {
-  return <>
-    <Sidebar />
-  </>
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
 }
