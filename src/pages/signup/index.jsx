@@ -7,7 +7,11 @@ export default function SignInPage() {
   return (
     <>
       <div className='signup-form-container'>
-        <FormSignUp />
+        <FormSignUp
+          onHandleSubmit={() => {
+            alert('signup...');
+          }}
+        />
       </div>
       <div className='signup-greetings-container'>
         <GreetingsBanner
