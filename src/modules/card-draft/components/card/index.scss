@@ -1,0 +1,74 @@
+@import '../../../../index';
+
+.draft-card {
+  .header {
+    background-color: $primary-blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #deeece;
+    font-weight: fw(medium);
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .user {
+        font-size: 11px;
+      }
+
+      .draft-title {
+        font-size: 10px;
+        color: #e2e2e2;
+      }
+    }
+  }
+
+  .body {
+    background-color: #ebf8ff;
+    padding: 10px 20px;
+    border: 1px solid $primary-blue;
+
+    .caption {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      .label {
+        font-size: fs(14);
+        color: $primary-blue;
+        font-weight: fw(medium);
+      }
+
+      .value {
+        color: $txt-color-dark-grey;
+        line-height: 27.02px;
+        font-size: fs(16);
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13.5px 0;
+
+      .author {
+        font-size: 10px;
+        color: #898989;
+        font-weight: fw(medium);
+      }
+
+      .draft-controll {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}
