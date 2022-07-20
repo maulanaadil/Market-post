@@ -16,6 +16,7 @@
   font-weight: fw(normal);
   font-size: fs(18);
   font-family: $ff-sans;
+  resize: none;
 
   &:focus {
     outline: none !important;

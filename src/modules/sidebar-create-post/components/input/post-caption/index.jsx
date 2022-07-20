@@ -6,7 +6,11 @@ import Icon, { iconTypes } from '@components/icon';
 
 import './index.scss';
 
-export default function InputPostCaption({ handleChange, handleLocation }) {
+export default function InputPostCaption({
+  handleChange,
+  handleLocation,
+  placeholder,
+}) {
   return (
     <>
       <div className='label-input'>Post Caption</div>
@@ -16,9 +20,13 @@ export default function InputPostCaption({ handleChange, handleLocation }) {
         handleChange={handleChange}
         className={`text-area`}
       />
-      <div className='select-location' onClick={handleLocation}>
+      <div
+        className='select-location'
+        id='container-select-location'
+        onClick={handleLocation}
+      >
         <Icon type={iconTypes.location} />
-        <p>Select your location</p>
+        <p id='select-location'>{placeholder}</p>
       </div>
     </>
   );

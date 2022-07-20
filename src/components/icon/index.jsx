@@ -17,6 +17,10 @@ import DraftDelete from '@assets/icons/draft-delete.svg';
 import NotifIcon from '@assets/icons/notif.svg';
 import HeaderDropdownIcon from '@assets/icons/header_dropdown.svg';
 import LocationIcon from '@assets/icons/location.svg';
+import AddIcon from '@assets/icons/add.svg';
+import TrashIcon from '@assets/icons/trash.svg';
+import PenIcon from '@assets/icons/pen.svg';
+import EyeIcon from '@assets/icons/eye.svg';
 
 export const iconTypes = {
   facebook: 'FACEBOOK_ICON',
@@ -38,6 +42,10 @@ export const iconTypes = {
   close: 'CLOSE_ICON',
   dropdown: 'DROPDOWN_ICON',
   location: 'LOCATION_ICON',
+  add: 'ADD_ICON',
+  trash: 'TRASH_ICON',
+  pen: 'PEN_ICON',
+  eye: 'EYE_ICON',
 };
 
 const iconSrc = {
@@ -59,11 +67,15 @@ const iconSrc = {
   CLOSE_ICON: CloseIcon,
   DROPDOWN_ICON: DropdownIcon,
   LOCATION_ICON: LocationIcon,
+  ADD_ICON: AddIcon,
+  TRASH_ICON: TrashIcon,
+  PEN_ICON: PenIcon,
+  EYE_ICON: EyeIcon,
 };
 
-export default function Icon({ type }) {
+export default function Icon({ type, handleClick }) {
   return (
-    <div className='icon'>
+    <div className='icon' onClick={handleClick}>
       <img src={iconSrc[type]} />
     </div>
   );

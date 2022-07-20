@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../components/button';
 
 import { iconTypes } from '../../components/icon';
@@ -6,14 +6,47 @@ import { iconTypes } from '../../components/icon';
 import './index.scss';
 import InputPostFor from './components/input/post-for';
 import InputPostCaption from './components/input/post-caption';
+import AttachImage from './components/input/attach-image';
 
 export default function SidebarCreatePost() {
+  const [location, setLocation] = useState('Select your location');
+
   function handleClose() {
     console.log('handleClose');
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+  }
+
+  function handleLocation() {
+    let key = Math.floor(Math.random() * 10);
+    switch (key) {
+      case 0:
+        return setLocation('Jatinangnor');
+      case 1:
+        return setLocation('Bandung');
+      case 2:
+        return setLocation('Bogor');
+      case 3:
+        return setLocation('Jakarta');
+      case 4:
+        return setLocation('Dipatiukur');
+      case 5:
+        return setLocation('Dago');
+      case 6:
+        return setLocation('Surabaya');
+      case 7:
+        return setLocation('Yogyakarta');
+      case 8:
+        return setLocation('Bogor');
+      case 9:
+        return setLocation('Depok');
+      default:
+        return setLocation(
+          'Mount Tangkuban Parahu Lembang, Bandung, West Java'
+        );
+    }
   }
 
   return (
@@ -44,13 +77,14 @@ export default function SidebarCreatePost() {
               <div className='post-caption'>
                 <InputPostCaption
                   handleChange={() => {}}
-                  handleLocation={() => {
-                    console.log('Location');
-                  }}
+                  handleLocation={handleLocation}
+                  placeholder={location}
                 />
               </div>
 
-              <div className='attach-images'></div>
+              <div className='attach-images'>
+                <AttachImage />
+              </div>
 
               <div className='publish-option'></div>
             </div>

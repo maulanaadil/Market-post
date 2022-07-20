@@ -37,6 +37,11 @@
 .create-post .box {
   padding: 40px;
   position: relative;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .create-post .wrapper {

@@ -11,7 +11,7 @@ const AccountTag = ({ id, logo, username, ...otherProps }) => {
   };
 
   const removeAccount = () => {
-    console.log('remove');
+    console.log(`remove ${id}`);
   };
 
   return (
