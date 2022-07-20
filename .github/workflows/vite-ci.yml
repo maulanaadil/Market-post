@@ -1,13 +1,15 @@
-name: Building Market Post
+# CI Name
+name: 'Deployment Market Post'
 
+# Only running when
 on:
   push:
-    branches: ['master']
-  pull_request:
-    branches: ['master']
+    branches:
+      - main
 
 jobs:
   build:
+    # Running on latest version of Ubuntu
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,17 +18,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      # This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
+      # Setup Node for Installing Dependencies
       - name: Setup Node Js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           check-lates: true
 
-      - name: install Depedencies
-        run: yarn install
+      - name: 'Installing Dependencies'
+        run: yarn
 
-       - name: 'Building Project'
+      - name: 'Building Project'
         run: yarn build
