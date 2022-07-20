@@ -1,3 +1,4 @@
+import Header from "../../header";
 import Sidebar from "../../sidebar";
 
 import "./index.scss"
@@ -9,7 +10,7 @@ export default function MainLayout({children}) {
     </div>
     <div className="main-layout-wrapper">
       <div className="main-layout-header">
-        {'{Header di sini}'}
+        <Header/>
       </div>
       <div className="main-layout-content">
         {children}
