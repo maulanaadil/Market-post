@@ -6,6 +6,8 @@ import ConfigIcon from "@assets/icons/config.svg";
 import HomeIcon from "@assets/icons/home.svg";
 import EngagementIcon from "@assets/icons/engagement.svg";
 import DraftIcon from "@assets/icons/draft.svg";
+import NotifIcon from "@assets/icons/notif.svg";
+import HeaderDropdownIcon from "@assets/icons/header_dropdown.svg";
 
 export const iconTypes = {
   facebook: "FACEBOOK_ICON",
@@ -13,6 +15,8 @@ export const iconTypes = {
   home: "HOME_ICON",
   engagement: "ENGAGEMENT_ICON",
   draft: "DRAFT_ICON",
+  notif: "NOTIF_ICON",
+  header_dropdown: "HEADER_DROPDOWN_ICON",
 };
 
 const iconSrc = {
@@ -21,6 +25,8 @@ const iconSrc = {
   HOME_ICON: HomeIcon,
   ENGAGEMENT_ICON: EngagementIcon,
   DRAFT_ICON: DraftIcon,
+  NOTIF_ICON: NotifIcon,
+  HEADER_DROPDOWN_ICON: HeaderDropdownIcon,
 };
 
 export default function Icon({ type }) {
