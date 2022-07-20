@@ -1,6 +1,8 @@
-name: Build
+name: Building Market Post
 
 on:
+  push:
+    branches: ['master']
   pull_request:
     branches: ['master']
 
@@ -14,11 +16,17 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: Checkout
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node Js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install packages
-      - run: yarn install
+          check-lates: true
+
+      - name: install Depedencies
+        run: yarn install
+
+       - name: 'Building Project'
+        run: yarn build
