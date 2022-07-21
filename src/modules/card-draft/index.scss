@@ -6,6 +6,11 @@
     margin: 0;
   }
 
+  max-width: 1025px;
+  margin: auto;
+
+  padding: 60px 0;
+
   .draft-container {
     display: flex;
     flex-direction: column;
@@ -25,11 +30,6 @@
       color: #848484;
       font-weight: 500;
     }
-  }
-
-  .draft-filter {
-    display: flex;
-    justify-content: space-between;
   }
 
   .draft-body {

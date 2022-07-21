@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../../components/button';
 import { iconTypes } from '../../components/icon';
 import Card from './components/card';
+import DraftFilter from './components/filter';
 
 import './index.scss';
 
@@ -14,15 +15,12 @@ export default function Draft() {
           <p>To save posts before sending to Instagram and Facebook</p>
         </div>
 
-        <div className="draft-filter">
-          <div>Filter</div>
-          <div>Last Modified Newest</div>
-        </div>
+        <DraftFilter />
 
         <div className="draft-body">
           <Button
             type="button"
-            icon={iconTypes.plus}
+            icon={iconTypes.draft_create}
             className={'btn-create-draft'}
             isBlock
             isLarge
