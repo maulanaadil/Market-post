@@ -36,7 +36,7 @@ export default function Draft() {
                   key={draft.id}
                   id={draft.id}
                   imgUrl={draft.imgUrl}
-                  sosmedIcon={draft.sosmed}
+                  sosmed={draft.sosmed}
                   name={draft.name}
                   username={draft.username}
                   captionValue={draft.caption}

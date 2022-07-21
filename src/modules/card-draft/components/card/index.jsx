@@ -1,11 +1,14 @@
 import Button from '../../../../components/button';
-import { iconTypes } from '../../../../components/icon';
+import Icon, { iconTypes } from '../../../../components/icon';
 import './index.scss';
+
+import InstagramIcon from '../../../../assets/logo/instagram.png';
+import FacebookIcon from '../../../../assets/logo/facebook.png';
 
 export default function Card({
   id,
   imgUrl,
-  sosmedIcon,
+  sosmed,
   name,
   username,
   captionValue,
@@ -23,12 +26,12 @@ export default function Card({
     <div className="draft-card">
       <div className="header">
         <div className="avatar">
-          <img src={imgUrl} alt={username}/>
+          <img src={imgUrl} alt={username} />
         </div>
         <div className="title">
           <div className="user">
-            <span>{sosmedIcon}</span> <span>{name}</span>{' '}
-            <span>{username}</span>
+            <img src={sosmedIconUrl(sosmed)} className="sosmed-icon" />
+            <span>{name}</span> <span className='username'>{username}</span>
           </div>
           <div className="draft-title">Draft Post</div>
         </div>
@@ -58,4 +61,14 @@ export default function Card({
       </div>
     </div>
   );
+}
+
+function sosmedIconUrl(sosmed) {
+  let iconType = sosmed.toLowerCase();
+  switch (iconType) {
+    case 'instagram':
+      return InstagramIcon;
+    case 'facebook':
+      return FacebookIcon;
+  }
 }

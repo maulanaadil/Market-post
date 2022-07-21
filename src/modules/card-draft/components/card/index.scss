@@ -28,6 +28,18 @@
 
       .user {
         font-size: 11px;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        .sosmed-icon {
+          height: 11px;
+          margin: auto;
+        }
+
+        .username {
+          color: #e2e2e2;
+        }
       }
 
       .draft-title {
