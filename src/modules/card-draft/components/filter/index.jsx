@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Icon, { iconTypes } from '../../../../components/icon';
+import Icon, { iconTypes } from '@components/icon';
 import filterData from '../../data/filter-data';
 
 import './index.scss';

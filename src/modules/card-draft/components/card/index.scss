@@ -12,6 +12,15 @@
     border: 1px solid #deeece;
     font-weight: fw(medium);
 
+    .avatar {
+      img {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
     .title {
       display: flex;
       flex-direction: column;
@@ -44,6 +53,8 @@
         font-size: fs(14);
         color: $primary-blue;
         font-weight: fw(medium);
+        align-self: baseline;
+        padding-top: 4px;
       }
 
       .value {
@@ -69,7 +80,8 @@
         display: flex;
         gap: 20px;
 
-        .edit, .delete {
+        .edit,
+        .delete {
           background-color: transparent;
           border: none;
         }

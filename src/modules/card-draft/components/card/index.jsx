@@ -2,15 +2,33 @@ import Button from '../../../../components/button';
 import { iconTypes } from '../../../../components/icon';
 import './index.scss';
 
-export default function Card(props) {
+export default function Card({
+  id,
+  imgUrl,
+  sosmedIcon,
+  name,
+  username,
+  captionValue,
+  author,
+}) {
+  const handleButtonEdit = () => {
+    alert(`Edit post ${id}`);
+  };
+
+  const handleButtonDelete = () => {
+    alert(`Delete post ${id}`);
+  };
+
   return (
     <div className="draft-card">
       <div className="header">
-        <div className="avatar">Avatar</div>
+        <div className="avatar">
+          <img src={imgUrl} alt={username}/>
+        </div>
         <div className="title">
           <div className="user">
-            <span>{'{Social Media Icon}'}</span> <span>{'{Name}'}</span>{' '}
-            <span>{'{Username}'}</span>
+            <span>{sosmedIcon}</span> <span>{name}</span>{' '}
+            <span>{username}</span>
           </div>
           <div className="draft-title">Draft Post</div>
         </div>
@@ -18,13 +36,23 @@ export default function Card(props) {
       <div className="body">
         <div className="caption">
           <div className="label">{'[Caption]'}</div>
-          <div className='value'>Hey ho let’s drink cofee with me ---....</div>
+          <div className="value">{captionValue}</div>
         </div>
         <div className="footer">
-          <div className="author">By Reymunda Alfathur</div>
+          <div className="author">By {author}</div>
           <div className="draft-controll">
-            <Button type='button' icon={iconTypes.draft_edit} className="edit"/>
-            <Button type='button' icon={iconTypes.draft_delete} className="delete"/>
+            <Button
+              type="button"
+              onClick={handleButtonEdit}
+              icon={iconTypes.draft_edit}
+              className="edit"
+            />
+            <Button
+              type="button"
+              onClick={handleButtonDelete}
+              icon={iconTypes.draft_delete}
+              className="delete"
+            />
           </div>
         </div>
       </div>

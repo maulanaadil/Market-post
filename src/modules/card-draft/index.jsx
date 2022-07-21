@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from '../../components/button';
-import { iconTypes } from '../../components/icon';
+import Button from '@components/button';
+import { iconTypes } from '@components/icon';
 import Card from './components/card';
 import DraftFilter from './components/filter';
+import draftData from './data/draft-data';
 
 import './index.scss';
 
@@ -29,7 +30,20 @@ export default function Draft() {
             Create Draft
           </Button>
           <div className="draft-list">
-            <Card />
+            {draftData.map((draft) => {
+              return (
+                <Card
+                  key={draft.id}
+                  id={draft.id}
+                  imgUrl={draft.imgUrl}
+                  sosmedIcon={draft.sosmed}
+                  name={draft.name}
+                  username={draft.username}
+                  captionValue={draft.caption}
+                  author={draft.author}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
