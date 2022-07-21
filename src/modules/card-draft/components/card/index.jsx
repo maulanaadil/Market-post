@@ -1,9 +1,9 @@
-import Button from '../../../../components/button';
-import Icon, { iconTypes } from '../../../../components/icon';
+import Button from '@components/button';
+import { iconTypes } from '@components/icon';
 import './index.scss';
 
-import InstagramIcon from '../../../../assets/logo/instagram.png';
-import FacebookIcon from '../../../../assets/logo/facebook.png';
+import InstagramIcon from '@assets/logo/instagram.png';
+import FacebookIcon from '@assets/logo/facebook.png';
 
 export default function Card({
   id,
