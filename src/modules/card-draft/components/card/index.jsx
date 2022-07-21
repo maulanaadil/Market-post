@@ -1,3 +1,5 @@
+import Button from '../../../../components/button';
+import { iconTypes } from '../../../../components/icon';
 import './index.scss';
 
 export default function Card(props) {
@@ -21,8 +23,8 @@ export default function Card(props) {
         <div className="footer">
           <div className="author">By Reymunda Alfathur</div>
           <div className="draft-controll">
-            <div>Edit</div>
-            <div>Delete</div>
+            <Button type='button' icon={iconTypes.draft_edit} className="edit"/>
+            <Button type='button' icon={iconTypes.draft_delete} className="delete"/>
           </div>
         </div>
       </div>

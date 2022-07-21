@@ -68,6 +68,11 @@
       .draft-controll {
         display: flex;
         gap: 20px;
+
+        .edit, .delete {
+          background-color: transparent;
+          border: none;
+        }
       }
     }
   }
