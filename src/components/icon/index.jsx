@@ -60,7 +60,6 @@ const iconSrc = {
   DRAFT_CREATE: DraftCreate,
   DRAFT_EDIT: DraftEdit,
   DRAFT_DELETE: DraftDelete,
-
   NOTIF_ICON: NotifIcon,
   HEADER_DROPDOWN_ICON: HeaderDropdownIcon,
 
@@ -71,6 +70,9 @@ const iconSrc = {
   TRASH_ICON: TrashIcon,
   PEN_ICON: PenIcon,
   EYE_ICON: EyeIcon,
+  MORE_ICON: MoreIcon,
+  FILTERDROPDOWN_ICON: FilterDropdownIcon,
+  SEARCH_ICON: SearchIcon,
 };
 
 export default function Icon({ type, handleClick }) {

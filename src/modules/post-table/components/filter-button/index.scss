@@ -1,0 +1,18 @@
+@import '../../index';
+
+.filter-button {
+    display: flex;
+    background-color: $primary-white;
+    color: $txt-color-dark-blue;
+    font-size: fs(12);
+    gap : 10px;
+    align-items: center;
+    padding: 8px 12px!important;
+    border: 1px solid #0B4B76;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-type {
+    font-weight: fw(semibold);
+}
