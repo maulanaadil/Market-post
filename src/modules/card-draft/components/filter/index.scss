@@ -1,0 +1,62 @@
+@import '../../../../index';
+
+.draft-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .label {
+    background-color: $primary-blue;
+    font-size: fs(14);
+    line-height: 17px;
+    padding: 10px 30px;
+    color: white;
+    font-weight: fw(medium);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .filter-container {
+    position: relative;
+    display: block;
+
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: 1px solid $primary-blue;
+      background-color: white;
+      color: black;
+      font-size: fs(14);
+      font-weight: fw(medium);
+      line-height: 16.94px;
+      cursor: pointer;
+    }
+
+    .filter-list {
+      position: absolute;
+      display: block;
+      background-color: white;
+      border: 1px solid $primary-blue;
+      font-size: fs(14);
+      text-align: left;
+      top: 100%;
+      right: 0;
+      margin-top: 5px;
+      width: 100%;
+      border-radius: 5px;
+
+      .filter-item {
+        display: block;
+        padding: 5px 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import '../../../../index';
+
+.draft-card {
+  .header {
+    background-color: $primary-blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $b-color-white-green;
+    font-weight: fw(medium);
+
+    .avatar {
+      img {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .user {
+        font-size: fs(11);
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        .sosmed-icon {
+          height: 11px;
+          margin: auto;
+        }
+
+        .username {
+          color: $txt-color-subtle-grey-2;
+        }
+      }
+
+      .draft-title {
+        font-size: fs(10);
+        color: $txt-color-subtle-grey-2;
+      }
+    }
+  }
+
+  .body {
+    background-color: $secondary-white-blue;
+    padding: 10px 20px;
+    border: 1px solid $primary-blue;
+
+    .caption {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      .label {
+        font-size: fs(14);
+        color: $primary-blue;
+        font-weight: fw(medium);
+        align-self: baseline;
+        padding-top: 4px;
+      }
+
+      .value {
+        color: $txt-color-dark-grey;
+        line-height: 27.02px;
+        font-size: fs(16);
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13.5px 0;
+
+      .author {
+        font-size: 10px;
+        color: $txt-color-dark-grey-2;
+        font-weight: fw(medium);
+      }
+
+      .draft-controll {
+        display: flex;
+        gap: 20px;
+
+        .edit,
+        .delete {
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+}
