@@ -1,4 +1,7 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
+
 import Button from '@components/button';
 import { iconTypes } from '@components/icon';
 import Card from './components/card';
@@ -7,29 +10,30 @@ import draftData from './data/draft-data';
 
 import './index.scss';
 
-export default function Draft() {
+export default function Draft({ createPostSideHandler }) {
   return (
-    <div className="draft">
-      <div className="draft-container">
-        <div className="draft-header">
+    <div className='draft'>
+      <div className='draft-container'>
+        <div className='draft-header'>
           <h1>Drafts</h1>
           <p>To save posts before sending to Instagram and Facebook</p>
         </div>
 
         <DraftFilter />
 
-        <div className="draft-body">
+        <div className='draft-body'>
           <Button
-            type="button"
+            type='button'
             icon={iconTypes.draft_create}
             className={'btn-create-draft'}
             isBlock
             isLarge
             isOutline
+            onClick={createPostSideHandler}
           >
             Create Draft
           </Button>
-          <div className="draft-list">
+          <div className='draft-list'>
             {draftData.map((draft) => {
               return (
                 <Card
@@ -50,3 +54,7 @@ export default function Draft() {
     </div>
   );
 }
+
+Draft.propTypes = {
+  createPostSideHandler: PropTypes.func.isRequired,
+};
