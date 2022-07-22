@@ -10,7 +10,7 @@ import './index.scss';
 
 export default function FormSignUp(props) {
   return (
-    <div className='container-form'>
+    <div className='container-form-signup'>
       <img src={Logo} alt='Market Project Logo' className='logo-form' />
       <form className='wrapper-form' onSubmit={props.onHandleSubmit}>
         <h2 className='title-form'>Signup Account</h2>
