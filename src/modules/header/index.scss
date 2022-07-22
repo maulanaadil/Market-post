@@ -1,0 +1,27 @@
+@import "../../index";
+
+.header {
+  .container nav {
+    height: 80px;
+    background: #fff;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+  }
+
+  .container nav .header-link {
+    height: 80px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 25px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
