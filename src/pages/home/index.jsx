@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SidebarCreatePost, MainLayout } from '@modules';
 import MainLayout from '@modules/layouts/main-layout';
+import Sidebar from '@modules/sidebar';
 import PostTable from '../../modules/post-table';
 
 export default function HomePage() {
