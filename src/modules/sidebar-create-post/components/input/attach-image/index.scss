@@ -1,0 +1,35 @@
+@import '../../../../../index.scss';
+
+.container-input-image {
+  width: 100%;
+  height: 180px;
+  padding: 15px;
+  border: 1px solid $txt-color-subtle-grey;
+  border-radius: 5px;
+  background-color: $primary-white-lotion;
+
+  .wrapper-image {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 26px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .add-image {
+      width: 132px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $primary-blue;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

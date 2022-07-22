@@ -1,0 +1,77 @@
+@import '../../../../../index';
+
+.post-for {
+  .btn-select {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: #848484;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .input-select .value {
+    height: 33px;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .input-select .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .input-select .dropdown-icon {
+    flex-shrink: 0;
+  }
+
+  .input-select .option {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    margin-top: 8px;
+    background-color: white;
+    box-shadow: 0px 15px 15px 0px #00000008;
+    border: solid 1px #cecece;
+    border-radius: 5px;
+  }
+
+  .input-select .option-list {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-select .option .apply-box {
+    box-shadow: 0px -1px 3px 0px #0000001a;
+    padding: 8px;
+  }
+
+  .input-select .option .apply-btn {
+    margin-left: auto;
+    font-size: 12px;
+    padding: 7px 24px;
+  }
+
+  .label-input {
+    font-size: fs(16);
+    font-weight: fw(medium);
+    margin-bottom: 10px;
+  }
+
+  .rotate {
+    transform: rotate(180deg) !important;
+  }
+}

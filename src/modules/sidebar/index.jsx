@@ -14,7 +14,12 @@ export default function Sidebar() {
         <div className="divider-sidebar"></div>
         <div className="menu-sidebar">
           {navLinks.map((item) => (
-            <MenuItem link={item.path} icon={item.icon} label={item.label} />
+            <MenuItem
+              link={item.path}
+              icon={item.icon}
+              label={item.label}
+              key={item.name}
+            />
           ))}
         </div>
       </div>
