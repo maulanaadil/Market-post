@@ -83,4 +83,23 @@
       @include btn-size(large);
     }
   }
+
+  &.btn-disabled {
+    background-color: $txt-color-subtle-grey-2;
+    color: $txt-color-black;
+    pointer-events: none;
+    border: transparent;
+
+    &.btn-block {
+      @include btn-size(block);
+    }
+
+    &.btn-sm {
+      @include btn-size(small);
+    }
+
+    &.btn-lg {
+      @include btn-size(large);
+    }
+  }
 }

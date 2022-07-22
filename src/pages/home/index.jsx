@@ -1,9 +1,12 @@
-import Sidebar from '@modules/sidebar';
+import React, { useState } from 'react';
 import MainLayout from '@modules/layouts/main-layout';
+import { SidebarCreatePost } from '../../modules';
 
 export default function HomePage() {
+  const [showSidebarPost, setShowSidebarPost] = useState(false);
   return (
     <>
+      <SidebarCreatePost show={showSidebarPost} setShow={setShowSidebarPost} />
       <MainLayout>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic expedita
         dolorem, minus minima officia exercitationem voluptates a fugiat ut quos

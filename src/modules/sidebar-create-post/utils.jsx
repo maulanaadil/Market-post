@@ -70,8 +70,8 @@ export function renderButtonForm(activePublish) {
       );
     default:
       return (
-        <Button type={'submit'} isPrimary className={'btn-publish'} disabled>
-          Save to draft
+        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
+          Publish now
         </Button>
       );
   }
