@@ -7,7 +7,7 @@
 
   .label {
     background-color: $primary-blue;
-    font-size: 14px;
+    font-size: fs(14);
     line-height: 17px;
     padding: 10px 30px;
     color: white;
@@ -33,7 +33,7 @@
       border: 1px solid $primary-blue;
       background-color: white;
       color: black;
-      font-size: 14px;
+      font-size: fs(14);
       font-weight: fw(medium);
       line-height: 16.94px;
       cursor: pointer;
@@ -44,7 +44,7 @@
       display: block;
       background-color: white;
       border: 1px solid $primary-blue;
-      font-size: 14px;
+      font-size: fs(14);
       text-align: left;
       top: 100%;
       right: 0;

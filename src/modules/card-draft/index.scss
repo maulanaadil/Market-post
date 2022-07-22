@@ -20,14 +20,14 @@
   .draft-header {
     h1 {
       font-weight: 700;
-      font-size: 30px;
+      font-size: fs(30);
       line-height: 36px;
       color: $txt-color-black;
       margin-bottom: 6px;
     }
 
     p {
-      color: #848484;
+      color: $txt-color-dark-grey-3;
       font-weight: 500;
     }
   }

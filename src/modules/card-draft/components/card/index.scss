@@ -9,7 +9,7 @@
     gap: 10px;
     padding: 20px;
     border-radius: 5px;
-    border: 1px solid #deeece;
+    border: 1px solid $b-color-white-green;
     font-weight: fw(medium);
 
     .avatar {
@@ -27,7 +27,7 @@
       gap: 5px;
 
       .user {
-        font-size: 11px;
+        font-size: fs(11);
         display: flex;
         gap: 6px;
         align-items: center;
@@ -38,19 +38,19 @@
         }
 
         .username {
-          color: #e2e2e2;
+          color: $txt-color-subtle-grey-2;
         }
       }
 
       .draft-title {
-        font-size: 10px;
-        color: #e2e2e2;
+        font-size: fs(10);
+        color: $txt-color-subtle-grey-2;
       }
     }
   }
 
   .body {
-    background-color: #ebf8ff;
+    background-color: $secondary-white-blue;
     padding: 10px 20px;
     border: 1px solid $primary-blue;
 
@@ -84,7 +84,7 @@
 
       .author {
         font-size: 10px;
-        color: #898989;
+        color: $txt-color-dark-grey-2;
         font-weight: fw(medium);
       }
 
