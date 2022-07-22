@@ -1,5 +1,5 @@
 @import '../../index';
-.container-sidebar {
+.sidebar {
   min-height: 100vh;
   max-width: 270px;
   width: 100%;
@@ -7,7 +7,7 @@
   min-width: 0;
 }
 
-.container-sidebar * {
+.sidebar * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
