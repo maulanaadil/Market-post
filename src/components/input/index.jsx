@@ -50,7 +50,7 @@ Input.propTypes = {
   placeholder: propTypes.string.isRequired,
   className: propTypes.string,
   style: propTypes.string,
-  label: propTypes.string.isRequired,
+  label: propTypes.string,
   children: propTypes.node,
-  handleChange: propTypes.func.isRequired,
+  handleChange: propTypes.func,
 };

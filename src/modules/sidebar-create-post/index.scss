@@ -82,16 +82,21 @@
   box-shadow: 0px 1px 7px 0px #00000026;
   display: flex;
   background-color: white;
-}
-
-.create-post .publish-box button {
-  margin-left: auto;
+  justify-content: flex-end;
+  column-gap: 10px;
 }
 
 .create-post .form-post {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.create-post .form-post .publish-option {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn-publish {
