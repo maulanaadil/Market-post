@@ -1,0 +1,24 @@
+@import '../../../index';
+
+.main-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  .main-layout-sidebar {
+    position: relative;
+    height: 100%;
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  .main-layout-wrapper {
+    background-color: $primary-bg-white;
+  }
+
+  .main-layout-content {
+    padding: 40px;
+  }
+}
