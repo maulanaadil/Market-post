@@ -26,6 +26,7 @@ export default function HomePage() {
               isSecondary
               isLarge
               onClick={onHandlerCreatePostSide}
+              isHasShadow
             >
               Create a post
             </Button>
