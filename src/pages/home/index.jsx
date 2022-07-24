@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { SidebarCreatePost, MainLayout, PostTable } from '@modules';
 import { Button } from '@components';
 
+import tableData from '@utils/data/table-data';
+
 import './index.scss';
 
 export default function HomePage() {
   const [showCreatePost, setShowCreatePost] = useState(false);
+  const [postData] = useState([...tableData]);
+
+  console.log(postData);
 
   const onHandlerCreatePostSide = () => {
     setShowCreatePost(true);
@@ -32,7 +37,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-        <PostTable />
+        <PostTable data={postData} rowsPerPage={6} />
       </MainLayout>
     </>
   );

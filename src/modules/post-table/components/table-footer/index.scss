@@ -1,0 +1,36 @@
+@import '../../../../index';
+
+.post-table .table-footer-wrapper {
+  padding: 8px 0px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .table-footer-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+
+    .table-footer-content {
+      border: none;
+      font-size: fs(16);
+      font-weight: fw(normal);
+      padding: 8px;
+      cursor: pointer;
+      background-color: transparent;
+      color: $txt-color-grey;
+      &.active {
+        color: $primary-blue;
+      }
+    }
+  }
+
+  .table-footer-pagination {
+    padding: 8px 10px;
+    cursor: pointer;
+    border: 1px solid $primary-blue;
+    border-radius: 3px;
+  }
+}

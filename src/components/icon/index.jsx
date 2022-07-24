@@ -24,6 +24,9 @@ import EyeIcon from '@assets/icons/eye.svg';
 import SearchIcon from '@assets/icons/search.svg';
 import MoreIcon from '@assets/icons/more.svg';
 
+import PrevTableIcon from '@assets/icons/prev-table.svg';
+import NextTableIcon from '@assets/icons/next-table.svg';
+
 export const iconTypes = {
   facebook: 'FACEBOOK_ICON',
   config: 'CONFIG_ICON',
@@ -51,6 +54,9 @@ export const iconTypes = {
 
   search: 'SEARCH_ICON',
   more: 'MORE_ICON',
+
+  prevTable: 'PREV_TABLE_ICON',
+  nextTable: 'NEXT_TABLE_ICON',
 };
 
 const iconSrc = {
@@ -78,6 +84,9 @@ const iconSrc = {
   MORE_ICON: MoreIcon,
   FILTERDROPDOWN_ICON: DraftFilterDropdown,
   SEARCH_ICON: SearchIcon,
+
+  NEXT_TABLE_ICON: NextTableIcon,
+  PREV_TABLE_ICON: PrevTableIcon,
 };
 
 export default function Icon({ type, handleClick, ...props }) {

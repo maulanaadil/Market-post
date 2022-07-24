@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FilterButton from './components/filter-button';
 import SearchButton from './components/search-button';
 import TableRow from './components/table-row';
-import listPost from './data/data.js';
+import TableFooter from './components/table-footer';
+
+import useTable from './utils';
 
 import './index.scss';
 
-export default function PostTable(props) {
+export default function PostTable({ data, rowsPerPage }) {
+  const [page, setPage] = useState(1);
+  const { slice, range } = useTable(data, page, rowsPerPage);
+
   return (
     <div className='post-table'>
       <div className='table-container'>
@@ -37,7 +42,7 @@ export default function PostTable(props) {
             </tr>
           </thead>
           <tbody>
-            {listPost.map((post, id) => {
+            {slice.map((post, id) => {
               return (
                 <TableRow
                   key={id}
@@ -53,6 +58,7 @@ export default function PostTable(props) {
           </tbody>
         </table>
       </div>
+      <TableFooter range={range} slice={slice} setPage={setPage} page={page} />
     </div>
   );
 }
