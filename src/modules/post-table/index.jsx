@@ -1,42 +1,30 @@
-import React from "react";
-import FilterButton from "./components/filter-button";
-import SearchButton from "./components/search-button";
-import TableRow from "./components/table-row";
-import listPost from "./data/data.js";
+import React from 'react';
+import FilterButton from './components/filter-button';
+import SearchButton from './components/search-button';
+import TableRow from './components/table-row';
+import listPost from './data/data.js';
 
-import "./index.scss";
+import './index.scss';
 
 export default function PostTable(props) {
   return (
-    <div className="post-table">
-
-      <div className="post-header">
-        <div>
-          <h1>Post</h1>
-          <p>You can set post information here.</p>
-        </div>
-
-        <div>
-          <button className="button-create">Create Post</button>
-        </div>
-      </div>
-
-      <div className="table-container">
-        <div className="filter-container">
-          <div className="filter-status">
-            <FilterButton filterType={'All'} label={'Post status: '}/>
+    <div className='post-table'>
+      <div className='table-container'>
+        <div className='filter-container'>
+          <div className='filter-status'>
+            <FilterButton filterType={'All'} label={'Post status: '} />
           </div>
 
-          <div className="filter-time">
-            <FilterButton filterType={'Latest'} label={'Post time: '}/>
+          <div className='filter-time'>
+            <FilterButton filterType={'Latest'} label={'Post time: '} />
           </div>
 
-          <div className="filter-search">
+          <div className='filter-search'>
             <SearchButton placeholder={'Search feeds'} />
           </div>
         </div>
 
-        <table className="table">
+        <table className='table'>
           <thead>
             <tr>
               <th>Caption</th>
@@ -65,7 +53,6 @@ export default function PostTable(props) {
           </tbody>
         </table>
       </div>
-      
     </div>
   );
 }

@@ -21,6 +21,8 @@ import AddIcon from '@assets/icons/add.svg';
 import TrashIcon from '@assets/icons/trash.svg';
 import PenIcon from '@assets/icons/pen.svg';
 import EyeIcon from '@assets/icons/eye.svg';
+import SearchIcon from '@assets/icons/search.svg';
+import MoreIcon from '@assets/icons/more.svg';
 
 export const iconTypes = {
   facebook: 'FACEBOOK_ICON',
@@ -46,6 +48,9 @@ export const iconTypes = {
   trash: 'TRASH_ICON',
   pen: 'PEN_ICON',
   eye: 'EYE_ICON',
+
+  search: 'SEARCH_ICON',
+  more: 'MORE_ICON',
 };
 
 const iconSrc = {
@@ -71,14 +76,14 @@ const iconSrc = {
   PEN_ICON: PenIcon,
   EYE_ICON: EyeIcon,
   MORE_ICON: MoreIcon,
-  FILTERDROPDOWN_ICON: FilterDropdownIcon,
+  FILTERDROPDOWN_ICON: DraftFilterDropdown,
   SEARCH_ICON: SearchIcon,
 };
 
-export default function Icon({ type, handleClick }) {
+export default function Icon({ type, handleClick, ...props }) {
   return (
     <div className='icon' onClick={handleClick}>
-      <img src={iconSrc[type]} />
+      <img src={iconSrc[type]} {...props} />
     </div>
   );
 }

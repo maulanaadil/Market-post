@@ -1,0 +1,21 @@
+@import '../../index';
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+
+  h1 {
+    color: $txt-color-black;
+    font-weight: fw(bold);
+    font-size: fs(30);
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: $txt-color-grey;
+    font-weight: fw(normal);
+    font-size: fs(18);
+  }
+}

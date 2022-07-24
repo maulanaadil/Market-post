@@ -1,18 +1,36 @@
 import React, { useState } from 'react';
-import { SidebarCreatePost, MainLayout } from '@modules';
-import MainLayout from '@modules/layouts/main-layout';
-import Sidebar from '@modules/sidebar';
-import PostTable from '../../modules/post-table';
+import { SidebarCreatePost, MainLayout, PostTable } from '@modules';
+import { Button } from '@components';
+
+import './index.scss';
 
 export default function HomePage() {
-  const [showSidebarPost, setShowSidebarPost] = useState(false);
+  const [showCreatePost, setShowCreatePost] = useState(false);
+
+  const onHandlerCreatePostSide = () => {
+    setShowCreatePost(true);
+  };
   return (
     <>
       <MainLayout>
-        <SidebarCreatePost
-          show={showSidebarPost}
-          setShow={setShowSidebarPost}
-        />
+        <SidebarCreatePost show={showCreatePost} setShow={setShowCreatePost} />
+        <div className='title-wrapper'>
+          <div>
+            <h1>Post</h1>
+            <p>You can set post information here.</p>
+          </div>
+
+          <div>
+            <Button
+              type={`button`}
+              isSecondary
+              isLarge
+              onClick={onHandlerCreatePostSide}
+            >
+              Create a post
+            </Button>
+          </div>
+        </div>
         <PostTable />
       </MainLayout>
     </>
