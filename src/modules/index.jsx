@@ -6,6 +6,7 @@ import Sidebar from './sidebar';
 import Header from './header';
 import CardDraft from './card-draft';
 import { MainLayout } from './layouts';
+import PostTable from './post-table';
 
 export {
   FormSignIn,
@@ -16,4 +17,5 @@ export {
   MainLayout,
   Sidebar,
   Header,
+  PostTable,
 };

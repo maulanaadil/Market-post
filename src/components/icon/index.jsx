@@ -21,6 +21,11 @@ import AddIcon from '@assets/icons/add.svg';
 import TrashIcon from '@assets/icons/trash.svg';
 import PenIcon from '@assets/icons/pen.svg';
 import EyeIcon from '@assets/icons/eye.svg';
+import SearchIcon from '@assets/icons/search.svg';
+import MoreIcon from '@assets/icons/more.svg';
+
+import PrevTableIcon from '@assets/icons/prev-table.svg';
+import NextTableIcon from '@assets/icons/next-table.svg';
 
 export const iconTypes = {
   facebook: 'FACEBOOK_ICON',
@@ -39,13 +44,17 @@ export const iconTypes = {
 
   close: 'CLOSE_ICON',
   dropdown: 'DROPDOWN_ICON',
-  close: 'CLOSE_ICON',
-  dropdown: 'DROPDOWN_ICON',
   location: 'LOCATION_ICON',
   add: 'ADD_ICON',
   trash: 'TRASH_ICON',
   pen: 'PEN_ICON',
   eye: 'EYE_ICON',
+
+  search: 'SEARCH_ICON',
+  more: 'MORE_ICON',
+
+  prevTable: 'PREV_TABLE_ICON',
+  nextTable: 'NEXT_TABLE_ICON',
 };
 
 const iconSrc = {
@@ -60,7 +69,6 @@ const iconSrc = {
   DRAFT_CREATE: DraftCreate,
   DRAFT_EDIT: DraftEdit,
   DRAFT_DELETE: DraftDelete,
-
   NOTIF_ICON: NotifIcon,
   HEADER_DROPDOWN_ICON: HeaderDropdownIcon,
 
@@ -71,12 +79,18 @@ const iconSrc = {
   TRASH_ICON: TrashIcon,
   PEN_ICON: PenIcon,
   EYE_ICON: EyeIcon,
+  MORE_ICON: MoreIcon,
+  FILTERDROPDOWN_ICON: DraftFilterDropdown,
+  SEARCH_ICON: SearchIcon,
+
+  NEXT_TABLE_ICON: NextTableIcon,
+  PREV_TABLE_ICON: PrevTableIcon,
 };
 
-export default function Icon({ type, handleClick }) {
+export default function Icon({ type, handleClick, ...props }) {
   return (
     <div className='icon' onClick={handleClick}>
-      <img src={iconSrc[type]} />
+      <img src={iconSrc[type]} {...props} />
     </div>
   );
 }
