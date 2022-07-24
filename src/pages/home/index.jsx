@@ -10,8 +10,6 @@ export default function HomePage() {
   const [showCreatePost, setShowCreatePost] = useState(false);
   const [postData] = useState([...tableData]);
 
-  console.log(postData);
-
   const onHandlerCreatePostSide = () => {
     setShowCreatePost(true);
   };
