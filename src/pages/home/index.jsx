@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SidebarCreatePost, MainLayout, PostTable } from '@modules';
-import { Button, Spinner } from '@components';
+import { Button } from '@components';
 
 import tableData from '@utils/data/table-data';
 
