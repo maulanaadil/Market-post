@@ -103,4 +103,13 @@
   font-size: fs(14);
   font-weight: fw(semibold);
   padding: 12.5px 19px;
+  transition: none;
+}
+
+.btn-calendar {
+  padding: 10px;
+  background-color: transparent;
+  border: $b-color-gray-2 1px solid;
+  color: $txt-color-dark-grey-3;
+  transition: none;
 }

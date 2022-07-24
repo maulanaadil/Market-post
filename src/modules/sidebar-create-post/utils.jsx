@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react';
 import Button from '../../components/button';
+import { iconTypes } from '../../components/icon';
+import CalendarTime from './components/calendar-time';
 
 export const optionValues = [
   {
@@ -47,24 +50,31 @@ export function renderButtonForm(activePublish) {
   switch (activePublish) {
     case 'publish':
       return (
-        <Button type={'submit'} isPrimary className={'btn-publish'}>
+        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
           Publish Post
         </Button>
       );
     case 'schedule':
       return (
         <>
-          <Button type={'button'} isSecondary className={'btn-calendar'}>
+          <Button
+            type={'button'}
+            className={'btn-calendar'}
+            icon={iconTypes.calendar}
+            onClick={() => {
+              alert('p');
+            }}
+          >
             Calendar
           </Button>
           <Button type={'submit'} isPrimary className={'btn-publish'}>
-            Publish Post
+            Schedule
           </Button>
         </>
       );
     case 'draft':
       return (
-        <Button type={'submit'} isPrimary className={'btn-publish'}>
+        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
           Save to draft
         </Button>
       );

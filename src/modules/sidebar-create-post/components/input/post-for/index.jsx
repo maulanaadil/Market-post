@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Icon, { iconTypes } from '@components/icon';
 import AccountDropdown from '../../account-dropdown';
@@ -10,6 +10,7 @@ import AccountTag from '../../account-tag';
 
 export default function InputPostFor() {
   const { accountData, showListAccount } = useDataStore();
+  const [schedule, setSchedule] = useState({date: null, time: null});
 
   const handleSelectAccount = () => {
     useDataStore.getState().setShowListAccount(!showListAccount);
