@@ -50,6 +50,14 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        &.status-published {
+          color: $secondary-green;
+        }
+
+        &.status-drafted {
+          color: $secondary-yellow;
+        }
       }
 
       .table-icon {

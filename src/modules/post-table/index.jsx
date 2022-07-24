@@ -30,18 +30,18 @@ export default function PostTable({ data, rowsPerPage }) {
         </div>
 
         <table className='table'>
-          <thead>
+          <thead className='table-head'>
             <tr>
               <th>Caption</th>
               <th>Date</th>
               <th>Status</th>
               <th>Likes</th>
               <th>Comments</th>
-              <th>Share</th>
+              <th>Shares</th>
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='table-body'>
             {slice.map((post, id) => {
               return (
                 <TableRow
