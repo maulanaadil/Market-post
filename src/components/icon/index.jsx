@@ -44,8 +44,6 @@ export const iconTypes = {
 
   close: 'CLOSE_ICON',
   dropdown: 'DROPDOWN_ICON',
-  close: 'CLOSE_ICON',
-  dropdown: 'DROPDOWN_ICON',
   location: 'LOCATION_ICON',
   add: 'ADD_ICON',
   trash: 'TRASH_ICON',
