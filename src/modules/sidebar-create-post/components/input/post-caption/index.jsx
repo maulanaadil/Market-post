@@ -17,7 +17,7 @@ export default function InputPostCaption({
       <Input
         element={`textArea`}
         placeholder={`Type something...`}
-        handleChange={handleChange}
+        onChange={handleChange}
         className={`text-area`}
       />
       <div
