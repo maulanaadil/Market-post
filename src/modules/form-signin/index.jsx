@@ -45,7 +45,7 @@ export default function FormSignIn() {
           label='Email'
           name='email'
           value={email}
-          handleChange={onHandleChange}
+          onChange={onHandleChange}
           required
         />
         <Input
@@ -55,7 +55,7 @@ export default function FormSignIn() {
           label='Password'
           name='password'
           value={password}
-          handleChange={onHandleChange}
+          onChange={onHandleChange}
           required
         />
         <div className='wrapper-checkbox'>
