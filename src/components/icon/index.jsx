@@ -22,7 +22,6 @@ import TrashIcon from '@assets/icons/trash.svg';
 import PenIcon from '@assets/icons/pen.svg';
 import EyeIcon from '@assets/icons/eye.svg';
 import CalendarIcon from '@assets/icons/calendar.svg';
-=======
 import SearchIcon from '@assets/icons/search.svg';
 import MoreIcon from '@assets/icons/more.svg';
 
@@ -93,8 +92,6 @@ const iconSrc = {
 export default function Icon({ type, handleClick, ...props }) {
   return (
     <div className="icon" onClick={handleClick}>
-      <img src={iconSrc[type]} />
-    <div className='icon' onClick={handleClick}>
       <img src={iconSrc[type]} {...props} />
     </div>
   );
