@@ -14,6 +14,7 @@ export default function Button(props) {
   if (props.isSmall) className.push('btn-sm');
   if (props.isBlock) className.push('btn-block');
   if (props.isDisabled) className.push('btn-disabled');
+  if (props.isHasShadow) className.push('btn-shadow');
 
   const onClick = () => {
     if (props.onClick) props.onClick();
