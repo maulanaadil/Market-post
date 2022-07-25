@@ -5,6 +5,8 @@ import Logo from '@assets/images/logo.png';
 import { Input, Button } from '@components';
 import Checkbox from './components/checkbox';
 
+import { useDataStore } from '@service/zustands';
+
 import './index.scss';
 import { defaultFormSignInFields } from './utils';
 
@@ -24,6 +26,7 @@ export default function FormSignIn() {
 
     if (email === 'admin@market.com' && password === 'password') {
       alert('success');
+      useDataStore.getState().setAuthUser('authenticated');
       navigate('/', { replace: true });
     } else {
       alert('Invalid account!');
@@ -42,7 +45,7 @@ export default function FormSignIn() {
           label='Email'
           name='email'
           value={email}
-          handleChange={onHandleChange}
+          onChange={onHandleChange}
           required
         />
         <Input
@@ -52,7 +55,7 @@ export default function FormSignIn() {
           label='Password'
           name='password'
           value={password}
-          handleChange={onHandleChange}
+          onChange={onHandleChange}
           required
         />
         <div className='wrapper-checkbox'>

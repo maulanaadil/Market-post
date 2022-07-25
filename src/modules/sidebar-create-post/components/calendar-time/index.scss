@@ -1,0 +1,125 @@
+@import '../../../../index';
+
+.calendar-time-container {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  width: fit-content;
+  padding: 24px;
+  max-width: 294px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  bottom: 100%;
+  margin-bottom: 8px;
+  position: absolute;
+
+  &.animate {
+    right: 0;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+  }
+
+  * {
+    font-family: $ff-sans;
+  }
+
+  .calendar {
+    width: 100%;
+    border: none;
+
+    .react-calendar__navigation {
+      height: auto;
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .react-calendar__navigation__arrow {
+        &.react-calendar__navigation__next-button,
+        &.react-calendar__navigation__prev-button {
+          background-color: transparent;
+          height: 32px !important;
+          width: 32px;
+          min-width: none;
+          border: 1px solid $b-color-gray;
+          border-radius: 8px;
+          font-weight: fw(bold);
+        }
+      }
+    }
+
+    .react-calendar__navigation__label__labelText {
+      font-size: fs(20);
+      font-weight: fw(bold);
+    }
+
+    .react-calendar__navigation__next2-button,
+    .react-calendar__navigation__prev2-button {
+      display: none;
+    }
+
+    .react-calendar__month-view__weekdays {
+      margin-bottom: 20px;
+      display: grid !important;
+      grid-template-columns: repeat(7, auto);
+      text-transform: capitalize;
+      gap: 10px;
+      font-size: fs(13);
+      font-weight: fw(medium);
+      color: $txt-color-dark-grey;
+
+      .react-calendar__month-view__weekdays__weekday {
+        padding: 0;
+      }
+      abbr {
+        display: block;
+        text-decoration: none;
+      }
+    }
+
+    .react-calendar__tile {
+      padding: 0;
+      min-width: none;
+      height: 32px;
+    }
+
+    .react-calendar__month-view__days {
+      display: grid !important;
+      gap: 10px;
+      grid-template-columns: repeat(7, 26.86px);
+      .react-calendar__month-view__days__day--weekend {
+        color: black;
+      }
+
+      .react-calendar__tile--now {
+        background-color: transparent;
+        flex: none;
+      }
+
+      .react-calendar__tile--active {
+        background-color: transparent;
+        color: $primary-blue;
+        outline: 1px solid $primary-blue;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .time {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    font-weight: fw(medium);
+    font-size: fs(13);
+
+    .input-time {
+      border: 1px solid #adadad;
+      border-radius: 5px;
+      padding: 5px;
+      font-weight: fw(medium);
+    }
+  }
+}

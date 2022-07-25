@@ -6,9 +6,7 @@ import ImageTag from '../../image-tag';
 
 import './index.scss';
 
-export default function AttachImage() {
-  const [file, setFile] = useState([]);
-
+export default function AttachImage({file, setFile}) {
   const onImageChange = (e) => {
     let ImagesArray = Object.entries(e.target.files).map((e) =>
       URL.createObjectURL(e[1])

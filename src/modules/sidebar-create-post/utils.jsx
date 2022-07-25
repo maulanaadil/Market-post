@@ -1,5 +1,3 @@
-import Button from '../../components/button';
-
 export const optionValues = [
   {
     id: 'publish',
@@ -40,39 +38,5 @@ export function handleLocation(setLocation) {
       return setLocation('Depok');
     default:
       return setLocation('Mount Tangkuban Parahu Lembang, Bandung, West Java');
-  }
-}
-
-export function renderButtonForm(activePublish) {
-  switch (activePublish) {
-    case 'publish':
-      return (
-        <Button type={'submit'} isPrimary className={'btn-publish'}>
-          Publish Post
-        </Button>
-      );
-    case 'schedule':
-      return (
-        <>
-          <Button type={'button'} isSecondary className={'btn-calendar'}>
-            Calendar
-          </Button>
-          <Button type={'submit'} isPrimary className={'btn-publish'}>
-            Publish Post
-          </Button>
-        </>
-      );
-    case 'draft':
-      return (
-        <Button type={'submit'} isPrimary className={'btn-publish'}>
-          Save to draft
-        </Button>
-      );
-    default:
-      return (
-        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
-          Publish now
-        </Button>
-      );
   }
 }

@@ -14,7 +14,7 @@ export default function Input(props) {
           name={props.name}
           className={`input ${className.join(' ')}`}
           style={props.style}
-          onChange={props.handleChange}
+          onChange={props.onChange}
           {...props}
         />
       );
@@ -25,7 +25,7 @@ export default function Input(props) {
           name={props.name}
           className={`input ${className.join(' ')}`}
           style={props.style}
-          onChange={props.handleChange}
+          onChange={props.onChange}
           {...props}
         />
       );
