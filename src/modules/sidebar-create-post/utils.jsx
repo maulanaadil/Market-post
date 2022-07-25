@@ -1,8 +1,3 @@
-import { useEffect, useState } from 'react';
-import Button from '../../components/button';
-import { iconTypes } from '../../components/icon';
-import CalendarTime from './components/calendar-time';
-
 export const optionValues = [
   {
     id: 'publish',
@@ -43,46 +38,5 @@ export function handleLocation(setLocation) {
       return setLocation('Depok');
     default:
       return setLocation('Mount Tangkuban Parahu Lembang, Bandung, West Java');
-  }
-}
-
-export function renderButtonForm(activePublish) {
-  switch (activePublish) {
-    case 'publish':
-      return (
-        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
-          Publish Post
-        </Button>
-      );
-    case 'schedule':
-      return (
-        <>
-          <Button
-            type={'button'}
-            className={'btn-calendar'}
-            icon={iconTypes.calendar}
-            onClick={() => {
-              alert('p');
-            }}
-          >
-            Calendar
-          </Button>
-          <Button type={'submit'} isPrimary className={'btn-publish'}>
-            Schedule
-          </Button>
-        </>
-      );
-    case 'draft':
-      return (
-        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
-          Save to draft
-        </Button>
-      );
-    default:
-      return (
-        <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
-          Publish now
-        </Button>
-      );
   }
 }
