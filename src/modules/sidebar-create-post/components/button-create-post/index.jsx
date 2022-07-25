@@ -18,7 +18,7 @@ export default function ButtonCreatePost({ buttonType }) {
 
   function BtnPublilsh() {
     return (
-      <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
+      <Button type={'submit'} isPrimary className={'btn-publish'}>
         Publish now
       </Button>
     );
@@ -27,7 +27,7 @@ export default function ButtonCreatePost({ buttonType }) {
 
 function BtnDraft() {
   return (
-    <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
+    <Button type={'submit'} isPrimary className={'btn-publish'}>
       Save to draft
     </Button>
   );
@@ -67,7 +67,7 @@ function BtnSchedule() {
           );
         }}
       </CreatePostConsumer>
-      <Button type={'submit'} isPrimary className={'btn-publish'} isDisabled>
+      <Button type={'submit'} isSecondary className={'btn-publish'} >
         Schedule
       </Button>
     </>
