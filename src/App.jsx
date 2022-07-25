@@ -16,14 +16,13 @@ import { useDataStore } from '@service/zustands';
 
 function App() {
   const { authUser } = useDataStore();
-  console.log(authUser);
   return (
     <Router>
       <Routes>
         <Route
           path='/'
           element={
-            <PrivateRoute>
+            <PrivateRoute authUser={authUser}>
               <HomePage />
             </PrivateRoute>
           }
@@ -31,7 +30,7 @@ function App() {
         <Route
           path='/engagement'
           element={
-            <PrivateRoute>
+            <PrivateRoute authUser={authUser}>
               <EngagementPage />
             </PrivateRoute>
           }
@@ -39,7 +38,7 @@ function App() {
         <Route
           path='/draft'
           element={
-            <PrivateRoute>
+            <PrivateRoute authUser={authUser}>
               <DraftPage />
             </PrivateRoute>
           }
