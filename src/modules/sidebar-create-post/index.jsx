@@ -14,7 +14,7 @@ import ButtonCreatePost from './components/button-create-post';
 import { CreatePostConsumer, CreatePostProvider } from './context';
 
 export default function SidebarCreatePost({ show, setShow }) {
-  const [activePublish, setActivePublish] = useState();
+  const [activePublish, setActivePublish] = useState('publish');
 
   function handleSubmit(e) {
     e.preventDefault();
