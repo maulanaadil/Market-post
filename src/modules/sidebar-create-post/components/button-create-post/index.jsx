@@ -4,6 +4,8 @@ import { iconTypes } from '@components/icon';
 import CalendarTime from '../calendar-time';
 import { CreatePostConsumer } from '../../context';
 
+import { toast } from 'react-toastify';
+
 export default function ButtonCreatePost({ buttonType }) {
   switch (buttonType) {
     case 'publish':
@@ -17,8 +19,22 @@ export default function ButtonCreatePost({ buttonType }) {
   }
 
   function BtnPublilsh() {
+    const [loading, setLoading] = useState(false);
+    const handlePublish = () => {
+      setLoading(true);
+      setTimeout(() => {
+        toast.success('Post created successfully');
+        setLoading(false);
+      }, 2000);
+    };
     return (
-      <Button type={'submit'} isPrimary className={'btn-publish'}>
+      <Button
+        type={'submit'}
+        isPrimary
+        className={'btn-publish'}
+        onClick={handlePublish}
+        disabled
+      >
         Publish now
       </Button>
     );
@@ -67,7 +83,7 @@ function BtnSchedule() {
           );
         }}
       </CreatePostConsumer>
-      <Button type={'submit'} isSecondary className={'btn-publish'} >
+      <Button type={'submit'} isSecondary className={'btn-publish'}>
         Schedule
       </Button>
     </>
