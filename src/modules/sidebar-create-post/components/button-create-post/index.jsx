@@ -1,55 +1,69 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import Button from '@components/button';
 import { iconTypes } from '@components/icon';
 import CalendarTime from '../calendar-time';
 import { CreatePostConsumer } from '../../context';
 
-import { toast } from 'react-toastify';
+import { useDataStore } from '../../../../service/zustands';
 
 export default function ButtonCreatePost({ buttonType }) {
   switch (buttonType) {
     case 'publish':
-      return BtnPublilsh();
+      return BtnPublish();
     case 'schedule':
       return BtnSchedule();
     case 'draft':
       return BtnDraft();
     default:
-      return BtnPublilsh();
+      return BtnPublish();
   }
-
-  function BtnPublilsh() {
-    const [loading, setLoading] = useState(false);
-    const handlePublish = () => {
-      setLoading(true);
-      setTimeout(() => {
-        toast.success('Post created successfully');
-        setLoading(false);
-      }, 2000);
-    };
-    return (
-      <Button
-        type={'submit'}
-        isPrimary
-        className={'btn-publish'}
-        onClick={handlePublish}
-        disabled
-      >
-        Publish now
-      </Button>
-    );
-  }
+}
+function BtnPublish() {
+  const { setLoading } = useDataStore();
+  const onClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      toast.success('Post created successfully');
+      setLoading(false);
+    }, 2000);
+  };
+  return (
+    <Button
+      type={'submit'}
+      isPrimary
+      className={'btn-publish'}
+      onClick={onClick}
+    >
+      Publish now
+    </Button>
+  );
 }
 
 function BtnDraft() {
+  const onClick = () => {
+    setTimeout(() => {
+      toast.success('Post saved as draft');
+    }, 2000);
+  };
   return (
-    <Button type={'submit'} isPrimary className={'btn-publish'}>
+    <Button
+      type={'submit'}
+      isPrimary
+      className={'btn-publish'}
+      onClick={onClick}
+    >
       Save to draft
     </Button>
   );
 }
 
 function BtnSchedule() {
+  const onClick = () => {
+    setTimeout(() => {
+      toast.success('Post scheduled successfully');
+    }, 2000);
+  };
   const [showCalendar, setShowCalendar] = useState(false);
 
   const formatDate = (dateString) => {
@@ -83,7 +97,12 @@ function BtnSchedule() {
           );
         }}
       </CreatePostConsumer>
-      <Button type={'submit'} isSecondary className={'btn-publish'}>
+      <Button
+        type={'submit'}
+        isSecondary
+        className={'btn-publish'}
+        onClick={onClick}
+      >
         Schedule
       </Button>
     </>

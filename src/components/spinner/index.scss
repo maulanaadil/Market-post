@@ -1,9 +1,12 @@
 .spinner-overlay {
-  height: 60vh;
+  position: fixed;
+  height: 100vh;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 
   .spinner-container {
     display: inline-block;
