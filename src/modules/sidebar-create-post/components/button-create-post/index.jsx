@@ -41,9 +41,12 @@ function BtnPublish() {
 }
 
 function BtnDraft() {
+  const { setLoading } = useDataStore();
   const onClick = () => {
+    setLoading(true)
     setTimeout(() => {
       toast.success('Post saved as draft');
+      setLoading(false)
     }, 2000);
   };
   return (
@@ -59,11 +62,15 @@ function BtnDraft() {
 }
 
 function BtnSchedule() {
+  const {setLoading} = useDataStore();
   const onClick = () => {
+    setLoading(true);
     setTimeout(() => {
       toast.success('Post scheduled successfully');
+      setLoading(false)
     }, 2000);
   };
+  
   const [showCalendar, setShowCalendar] = useState(false);
 
   const formatDate = (dateString) => {
