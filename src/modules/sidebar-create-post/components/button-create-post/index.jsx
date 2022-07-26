@@ -8,16 +8,13 @@ import { CreatePostConsumer } from '../../context';
 import { useDataStore } from '../../../../service/zustands';
 
 export default function ButtonCreatePost({ buttonType }) {
-  switch (buttonType) {
-    case 'publish':
-      return BtnPublish();
-    case 'schedule':
-      return BtnSchedule();
-    case 'draft':
-      return BtnDraft();
-    default:
-      return BtnPublish();
-  }
+  return (
+    <>
+      {buttonType === 'publish' && <BtnPublish />}
+      {buttonType === 'schedule' && <BtnSchedule />}
+      {buttonType === 'draft' && <BtnDraft />}
+    </>
+  );
 }
 function BtnPublish() {
   const { setLoading } = useDataStore();
@@ -43,10 +40,10 @@ function BtnPublish() {
 function BtnDraft() {
   const { setLoading } = useDataStore();
   const onClick = () => {
-    setLoading(true)
+    setLoading(true);
     setTimeout(() => {
       toast.success('Post saved as draft');
-      setLoading(false)
+      setLoading(false);
     }, 2000);
   };
   return (
@@ -62,15 +59,15 @@ function BtnDraft() {
 }
 
 function BtnSchedule() {
-  const {setLoading} = useDataStore();
+  const { setLoading } = useDataStore();
   const onClick = () => {
     setLoading(true);
     setTimeout(() => {
       toast.success('Post scheduled successfully');
-      setLoading(false)
+      setLoading(false);
     }, 2000);
   };
-  
+
   const [showCalendar, setShowCalendar] = useState(false);
 
   const formatDate = (dateString) => {
