@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,25 +6,25 @@ import {
   Navigate,
 } from 'react-router-dom';
 
-import SignInPage from './pages/signin';
-import HomePage from './pages/home';
-import EngagementPage from './pages/engagement';
-import DraftPage from './pages/draft';
-import SignUpPage from './pages/signup';
-
 import Spinner from './components/spinner';
 
 import { useDataStore } from '@service/zustands';
 
+const SignInPage = lazy(() => import('./pages/signin'));
+const SignUpPage = lazy(() => import('./pages/signup'));
+const HomePage = lazy(() => import('./pages/home'));
+const EngagementPage = lazy(() => import('./pages/engagement'));
+const DraftPage = lazy(() => import('./pages/draft'));
+
 function App() {
   const { authUser, loading } = useDataStore();
   return (
-    <>
+    <Suspense fallback={<Spinner />}>
       {loading && <Spinner />}
       <Router>
         <Routes>
           <Route
-            path="/"
+            path='/'
             element={
               <PrivateRoute authUser={authUser}>
                 <HomePage />
@@ -32,7 +32,7 @@ function App() {
             }
           />
           <Route
-            path="/engagement"
+            path='/engagement'
             element={
               <PrivateRoute authUser={authUser}>
                 <EngagementPage />
@@ -40,7 +40,7 @@ function App() {
             }
           />
           <Route
-            path="/draft"
+            path='/draft'
             element={
               <PrivateRoute authUser={authUser}>
                 <DraftPage />
@@ -48,21 +48,21 @@ function App() {
             }
           />
           <Route
-            path="/signin"
-            element={authUser ? <Navigate to="/" /> : <SignInPage />}
+            path='/signin'
+            element={authUser ? <Navigate to='/' /> : <SignInPage />}
           />
           <Route
-            path="/signup"
-            element={authUser ? <Navigate to="/" /> : <SignUpPage />}
+            path='/signup'
+            element={authUser ? <Navigate to='/' /> : <SignUpPage />}
           />
         </Routes>
       </Router>
-    </>
+    </Suspense>
   );
 }
 
 const PrivateRoute = ({ authUser, children }) => {
-  return authUser ? children : <Navigate to="/signin" />;
+  return authUser ? children : <Navigate to='/signin' />;
 };
 
 export default App;
