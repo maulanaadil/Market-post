@@ -1,6 +1,6 @@
 @import '../../index';
 .signin-form-container {
-  height: 100vh;
+  height: 100%;
   width: 60%;
   float: left;
 }
@@ -8,8 +8,7 @@
 .signin-greetings-container {
   height: 100vh;
   width: 40%;
-  background: url('../../assets/images/background-form.png')
-    rgba(64, 160, 208, 1);
+  background: url('../../assets/images/background-form.png') $primary-blue;
   background-size: cover;
   background-blend-mode: multiply;
   float: right;
